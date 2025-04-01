@@ -1,94 +1,94 @@
+* {
+    margin-left: 0;
+    margin-top: 0;
+}
+
 html {
-    background-color:#202020;
-}
-
-main {
-    color: #f3f3f3;
-    padding-left:13%;
-    padding-bottom:2%;
-}
-
-header, footer {
-    margin: 0 auto;
-    background-color: #151515;
-    color: #f3f3f3;
-    border: 4px solid #525d69;
-    border-radius:20px;
-}
-
-header {
-    position: fixed;
-    height:100%;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    text-align:center;
-    border-top: 0;
-    border-left: 0;
-    width:11%;
-}
-
-footer {
-    bottom:0;
-    padding-left: 0%;
-    border-left: 0;
-    border-bottom: 0;
-    border-right: 0;
-    width:100%;
-    height:20%;
-    text-align:center;
+    background-color: #101010;
 }
 
 h1, h2, h3 {
-    font-family:'Segoe UI';
-}
-
-h1 {
-    font-size: 22px;
+    font-family: 'Segoe UI';
 }
 
 h2 {
-    padding: 5;
-    font-size: 20px;
-    background-color: rgba(120, 151, 237, 0.333);
-    border: 3px solid #111111;
-    border-radius: 10px;
-}
-
-h3 {
-    font-size: 18px;
+    background-color: rgb(113, 60, 60);
+    border: 4px solid black;
+    border-radius: 25px;
+    padding-left: 1%;
 }
 
 p, a {
-    font-family:Verdana;
-    font-size: 16px;
+    font-family: Verdana;
 }
 
 a {
-    color:#797e9c;
+    color: rgb(110, 110, 110);
+    text-decoration-line: none;
 }
 
-img {
-    border:5px solid #6e8ba9;
-    border-radius:20px;
-}
-
-.container {
+header {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 80%;
-    padding: 50px;
-    border: 2px solid #353535;
-    border-radius:20px;
+    align-items: left;
+    background-color: #101010;
+    color: white;
+    padding: 10px 20px;
 }
 
-.contact_h2 {
-    background-color:rgba(35, 35, 35, 0);
-    border: 0px;
+.text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header img {
+    width: 8%;
+    margin-right: 15px;
+    border: 5px solid rgb(113, 60, 60);
+}
+
+header p {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 250px;
+    background-color: #131313;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1;
+    padding: 15px;
+    background-color: #151515;
+    color: white;
+}
+
+footer {
+    background-color: #101010;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer h2 {
+    background: none;
+    border: none;
 }
 
 .contact_table {
     margin: 0px auto;
-    color: #f3f3f3;
+    color: white;
 }
