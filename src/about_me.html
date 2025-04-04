@@ -1,4 +1,5 @@
 <html>
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     
     <body>
         <header>
-            <img src="img/Avatar.jpg" width="5%" alt="Frieren">
+            <img src="img/Avatar.jpg" width="5%" alt="Igris">
             <div class="text_container">
                 <h1>Raimondi Matias</h1>
                 <p>19 años.</p>
@@ -21,62 +22,127 @@
         <div class="content">
             <aside>
                 <nav>
-                    <p><a href="#sobremi"><i class="fa fa-user-circle" aria-hidden="true"></i> Ir a sobre mi</a></p>
-                    <p><a href="#proyectos"><i class="fa fa-flag" aria-hidden="true"></i> Ir a proyectos</a></p>
-                    <p><a href="#info"><i class="fa fa-address-card" aria-hidden="true"></i> Ir a información adicional</a></p>
-                    <p><a href="#contacto"><i class="fa fa-external-link" aria-hidden="true"></i> Ir a contacto</a></p>
+                    <p>
+                        <a href="#aboutme">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i> 
+                            Ir a sobre mi
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#projects">
+                            <i class="fa fa-flag" aria-hidden="true"></i> 
+                            Ir a proyectos
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#information">
+                            <i class="fa fa-address-card" aria-hidden="true"></i> 
+                            Ir a información
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#contact">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> 
+                            Ir a contacto
+                        </a>
+                    </p>
                 </nav>
             </aside>
 
             <main>
-                <section id="sobremi">
-                    <h2><i class="fa fa-user-circle" aria-hidden="true"></i> Sobre mi</h2>
-                    <p>Aprendiendo desarrollo web, esta es mi primera página.</p>
+                <section id="aboutme">
+                    <h2>
+                        <i class="fa fa-user-circle" aria-hidden="true"></i> 
+                        Sobre mi
+                        <button onclick="toggleSection('aboutme_block', 'aboutme_collapse')" id="aboutme_collapse" class="collapse">↑</button>
+                    </h2>
+                    <div id="aboutme_block">
+                        <p>Aprendiendo desarrollo web, esta es mi primera página.</p>
+                    </div>
                 </section>
                 
-                <section id="proyectos">
-                    <h2><i class="fa fa-flag" aria-hidden="true"></i> Proyectos</h2>
-                    <ol>
-                        <article>
-                            <li><h3>Bot de Discord con IA</h3></li>
-                            <p>Aplicación desarrollada en NodeJS que permite poner en linea un bot de Discord que se conecta con el API de OpenAI. <a href="https://github.com/MatiRaimondi1/Discord-Bot-with-AI">(Repositorio)</a></p>
-                        </article>
+                <section id="projects">
+                    <h2>
+                        <i class="fa fa-flag" aria-hidden="true"></i> 
+                        Proyectos
+                        <button onclick="toggleSection('projects_block', 'projects_collapse')" id="projects_collapse" class="collapse">↑</button>
+                    </h2>
+                    <div id="projects_block">
+                        <div class="projects">
+                            <article>
+                                <h3>Bot de Discord con IA</h3>
+                                <p>
+                                    Aplicación desarrollada en NodeJS que permite poner en linea un bot de Discord que se conecta con el API de OpenAI. 
+                                    <a href="https://github.com/MatiRaimondi1/Discord-Bot-with-AI">(Repositorio)</a>
+                                </p>
+                            </article>
                     
-                        <article>
-                            <li><h3>Query de MySQL desde aplicación</h3></li>
-                            <p>Aplicación desarrollada en TypeScript que mediante el uso del API de MySQL realiza una consulta para obtener una lista de usuarios dentro de una base de datos. <a href="https://github.com/MatiRaimondi1/MySQL-Query-on-TypeScript">(Repositorio)</a></p>
-                        </article>
+                            <article>
+                                <h3>Query de MySQL desde aplicación</h3>
+                                <p>
+                                    Aplicación desarrollada en TypeScript que mediante el uso del API de MySQL realiza una consulta para obtener una lista de usuarios dentro de una base de datos. 
+                                    <a href="https://github.com/MatiRaimondi1/MySQL-Query-on-TypeScript">(Repositorio)</a>
+                                </p>
+                            </article>
                     
-                        <article>
-                            <li><h3>Directorio de contactos con persistencia</h3></li>
-                            <p>Aplicación desarrollada en C++ que permite simular una lista de contactos con su nombre, numero de telefono y correo electronico, permite agregar, eliminar y buscar contactos, a su vez, cuenta con una función de guardado y cargado para no perder datos. <a href="https://github.com/MatiRaimondi1/Contacts-Directory-with-Persistence">(Repositorio)</a></p>
-                        </article>
-                    </ol>
+                            <article>
+                                <h3>Directorio de contactos con persistencia</h3>
+                                <p>
+                                    Aplicación desarrollada en C++ que permite simular una lista de contactos con su nombre, numero de telefono y correo electronico, permite agregar, eliminar y buscar contactos, a su vez, cuenta con una función de guardado y cargado para no perder datos. 
+                                    <a href="https://github.com/MatiRaimondi1/Contacts-Directory-with-Persistence">(Repositorio)</a>
+                                </p>
+                            </article>
+                        </div>
+                    </div>
                 </section>
 
-                <section id="contacto">
-                    <h2><i class="fa fa-external-link" aria-hidden="true"></i> Contacto</h2>
-                    <form action="/enviar_formulario" method="post">
-                        <p><label for="nombre">Nombre:</label></p>
-                        <p><input type="text" id="nombre" name="nombre"></p>
-                        <p><label for="email">Email:</label></p>
-                        <p><input type="email" id="email" name="email"></p>
-                        <p><label for="mensaje">Mensaje:</label></p>
-                        <p><textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea></p>
-                        <p><input type="submit" value="Enviar" id="enviar"></p>
+                <section id="information">
+                    <h2>
+                        <i class="fa fa-address-card" aria-hidden="true"></i> 
+                        Información
+                        <button onclick="toggleSection('information_block', 'information_collapse')" id="information_collapse" class="collapse">↑</button>
+                    </h2>
+                    <ul id="information_block">
+                        <li>
+                            <p>1er año de tecnicatura en programación completo.</p>
+                        </li>
+                        <li>
+                            <p>Conocimiento en C++ y TypeScript.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <h2>
+                        <i class="fa fa-external-link" aria-hidden="true"></i> 
+                        Contacto
+                        <button onclick="toggleSection('contact_block', 'contact_collapse')" id="contact_collapse" class="collapse">↑</button>
+                    </h2>
+                    <form id="contact_block" action="/enviar_formulario" method="post">
+                        <p>
+                            <label for="name">Nombre:</label>
+                        </p>
+                        <p>
+                            <input type="text" id="name" name="name">
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                        </p>
+                        <p>
+                            <input type="email" id="email" name="email">
+                        </p>
+                        <p>
+                            <label for="message">Mensaje:</label>
+                        </p>
+                        <p>
+                            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Enviar" id="submit">
+                        </p>
                     </form>
                 </section>
             </main>
-
-            <div class="right_aside">
-                <section id="info">
-                    <h2><i class="fa fa-address-card" aria-hidden="true"></i> Información</h2>
-                    <ul>
-                        <li><p>1er año de tecnicatura en programación completo.</p></li>
-                        <li><p>Conocimiento en C++ y TypeScript.</p></li>
-                    </ul>
-                </section>
-            </div>
         </div>
         
         <footer>
@@ -89,12 +155,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="https://github.com/MatiRaimondi1?tab=repositories">MatiRaimondi1</a></td>
-                        <td><p>MyNameIsKori</p></td>
+                        <td>
+                            <a href="https://github.com/MatiRaimondi1?tab=repositories">MatiRaimondi1</a>
+                        </td>
+                        <td>
+                            <p>MyNameIsKori</p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <p>© Raimondi Matías 2025</p>
         </footer>
+
+        <script src="javascript/about_me.js"></script>
     </body>
+
 </html>
